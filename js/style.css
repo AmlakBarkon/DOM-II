@@ -1,0 +1,37 @@
+/* I created this css file ; */
+.parent {
+    display: flex;
+    flex-direction: row;
+    flex-basis: 4rem;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+.childrenDiv {
+    background: #6AB6D8;
+    padding: 10px;
+    margin: 50px;
+    border: 3px solid #2E86BB;
+    color: white;
+    font-size: 14px;
+    text-align: center;
+    position: relative;
+}
+.welcomePar {
+    width:60%;
+   height: 20%;
+    background-Color: white;
+   padding: 40px;
+    margin-Left: 20%;
+    border: 4px solid black;
+    opacity:  0.8;
+}
+.funSun {
+    float: left; 
+    width: 20%; 
+    height: 90%;
+    margin: 15px;
+    padding: 10px;
+    border: 2px solid white;
+   
+  }
