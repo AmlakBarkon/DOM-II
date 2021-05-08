@@ -1,8 +1,16 @@
 /* I created this css file ; */
+*{
+    margin: 0;
+    padding: 0;
+}
+body {
+    margin: 0;
+    padding: 0;
+}
 .parent {
     display: flex;
     flex-direction: row;
-    flex-basis: 4rem;
+    /* flex-basis: 4rem; */
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
@@ -10,7 +18,7 @@
 .childrenDiv {
     background: #6AB6D8;
     padding: 10px;
-    margin: 50px;
+    /* margin: 50px; */
     border: 3px solid #2E86BB;
     color: white;
     font-size: 14px;
@@ -28,10 +36,32 @@
 }
 .funSun {
     float: left; 
-    width: 20%; 
+    width: 50%; 
     height: 90%;
     margin: 15px;
     padding: 10px;
     border: 2px solid white;
    
+  }
+  .toggleme:hover{
+    opacity: .5;
+    border: 2px solid brown;
+  }
+  .intro {
+      width:100%;
+  }
+
+  #draggable {
+    width: 200px;
+    height: 20px;
+    text-align: center;
+    background: white;
+  }
+
+  .dropzone {
+    width: 200px;
+    height: 20px;
+    background: blueviolet;
+    margin-bottom: 10px;
+    padding: 10px;
   }

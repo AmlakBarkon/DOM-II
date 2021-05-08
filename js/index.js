@@ -1,9 +1,11 @@
 //Change the body color when it is loaded;
 let bodyColor = document.querySelector("body");
 let logoHeader = document.querySelector(".logo-heading");
+
 window.addEventListener("load", ()=>{
    bodyColor.style.backgroundColor="wheat"
    logoHeader.style.color ="red";
+
    logoHeader.style.fontSize ="40px";
    logoHeader.style.letterSpacing ="1.4rem";
    bodyColor.style.textAlign ="center"
@@ -33,18 +35,16 @@ headerH2.forEach(x=>{
 })
 //logo image header image border-radius;
 let log = document.querySelector("header img");
- log.style.width="80%";
- log.style.height="100%";
- log.style.borderRadius ="70px"
-log.style.top= 0;
-log.style.right="100px";
-log.style.display= "relative";
+//  log.style.width="80%";
+ log.style.marginTop ="5%"
+//  log.style.height="100%";
+//  log.style.borderRadius ="70px"
+
+
 //section images flex box advance flex-direction row
-let images = document.querySelectorAll("section img");
+let images = document.querySelectorAll(".img-content");
 images.forEach(image=>{
-    
-    image.style.display="inline"
-    image.style.margin= "10px"
+   
     image.addEventListener("mouseover", ()=>{
         image.style.opacity = 0.5;
         
@@ -52,15 +52,20 @@ images.forEach(image=>{
 })
 //text content div first
 let textContentDiv = document.querySelectorAll(".text-content");
+textContentDiv.forEach(x=>{
+    x.addEventListener("select", ()=>{
 textContentDiv.forEach(item=>{
-item.style.width="60%";
+item.style.width="50%";
 item.style.height="20%";
 item.style.backgroundColor="white"
 item.style.padding="40px";
 item.style.marginLeft="20%"
 item.style.border="4px solid black"
 item.style.opacity = 0.7;
+}) 
+    })
 })
+
 //div class content destination p 
 let contentDestination = document.querySelectorAll(".content-destination p");
 contentDestination[0].classList.add("welcomePar")
@@ -70,42 +75,72 @@ console.log(welcomeP)
 welcomeP.classList.add("welcomePar")
 
 let contentSection = document.querySelector(".content-section");
-console.log(contentSection.display="flex")
-contentSection.display="flex";
-contentSection.style.flex.direction ="row"
+contentSection.style.display="flex"
+console.log(contentSection,"name")
+contentSection.style.flex.direction ="column"
 
 
 
 
 //Fun in the sum paragraph and section content-pict formating
-let contentPick = document.querySelectorAll(".content-pick");
-contentPick[0].style.alignItems ="center"
+let contentPick = document.querySelectorAll(".content-section");
+// contentPick[0].style.alignItems ="center"
 contentPick[0].children[0].style.backgroundColor ="gray";
-contentPick[0].children[0].style.float="left";
-contentPick[0].children[0].classList.add("funSun");
-contentPick[0].children[1].style.float="left";
-contentPick[0].children[1].classList.add("funSun");
-contentPick[0].children[2].style.float="left";
-contentPick[0].children[2].classList.add("funSun");
-// contentPick.addEventListener("click", ()=>{
+// contentPick[0].children[0].classList.add("funSun");
 
-// })
 //Sign ME up button added
-let signup = document.querySelectorAll(".btn");
-console.log(signup)
-let buttonCreate = document.createElement("button");
-
-buttonCreate.textContent = signup[0].textContent;
-signup[0].appendChild(buttonCreate)
  
-buttonCreate.textContent = signup[1].textContent;
-signup[1].appendChild(buttonCreate)
-//targeting footer 
-let footer = document.querySelectorAll("footer")
-footer[0].style.backgroundColor ="black";
-footer[0].style.color="white";
-footer[0].style.opacity = .6
-footer[0].style.fontSize="28px";
-footer[0].style.float="left";
-footer[0].style.width="100%";
+let footer = document.querySelector("footer")
+footer.style.backgroundColor ="black";
+footer.style.color="white";
+footer.style.opacity = .6;
+footer.style.fontSize="48px";
+
+footer.style.width="100%";
 console.log(footer)
+// window.addEventListener("load", function(){
+let navContainer = document.querySelectorAll(".nav-link");
+navContainer.forEach(x=>{
+    x.addEventListener("mouseover", ()=>{
+       x.style.backgroundColor="red";
+       x.style.padding ="20px";
+       x.style.borderRadius = "5px"
+       x.style.margin="5px";
+       if(`${x.style.color}`=="blue"){
+           x.style.color= "white"
+       }else{
+           x.style.color ="blue"
+       }
+    })
+    
+})
+
+  document.addEventListener("keydown", event=>{
+    event.preventDefault;
+    let divOne = document.createElement("h4");
+    divOne.textContent = `${event.key}`
+   alert("You Press " + JSON.stringify(event.key))
+ 
+})
+document.body.addEventListener("mouseover", (event)=>{
+    document.body.style.backgroundColor="wheat";
+      event.defaultPrevented;
+    if(event.target.style.backgroundColor=="wheat"){
+        document.body.style.backgroundColor ="white"
+    }
+})
+function changeImage(event){
+   console.log(event.target);
+   event.target.src ="img/barkon.jpeg"
+}
+let imagebus = document.querySelector("img");
+   imagebus.addEventListener("dblclick", changeImage)
+// })
+//dblclick on on the car image
+let keyPush = document.querySelector('body')
+keyPush.addEventListener('keydown', function(event) {
+    event.target.style.color = 'pink'
+    setTimeout(function() {
+        event.target.style.color = "";
+    }, 500);
+}, false);
