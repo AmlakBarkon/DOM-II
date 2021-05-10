@@ -1,5 +1,6 @@
  //Change the body color when it is loaded;
   window.addEventListener("load", function(){
+  let input ="";//name inter
  let body = document.querySelector("body");
  body.style.padding=" 0,50px, 0 ,50px";
   
@@ -57,6 +58,7 @@ let bodyOne = document.querySelector(".container");
 let images = document.querySelectorAll(".img-content");
 images.forEach(image=>{
     image.addEventListener("mouseover", ()=>{
+   
     image.style.opacity = 1; 
     image.style.transform= "rotate(180deg)";
     })
@@ -114,7 +116,7 @@ navContainer.forEach(x=>{
     event.preventDefault;
     let divOne = document.createElement("h4");
     divOne.textContent = `${event.key}`
-   alert("You Press " + JSON.stringify(event.key))
+   alert("You Press " + JSON.stringify(input))
  
 })
 document.body.addEventListener("mouseover", (event)=>{
@@ -137,6 +139,7 @@ let imageBus = document.querySelector("img");
 let keyPush = document.querySelector('body')
 console.log("keypush",keyPush)
 keyPush.addEventListener('dblclick', function(event) {
+    input = prompt("You sure you want to go to Google?");
     event.target.style.color = 'pink';
     keyPush.style.backgroundColor ="black";
 });   
